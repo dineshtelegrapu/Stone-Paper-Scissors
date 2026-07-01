@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="script.js"></script>
+    <title>Stone-Paper-Scissors</title>
+</head>
+<body>
+    <div class="score-board">
+        <div id="user-label" class="badge">You &</div>
+        <div id="computer-label" class="badge">Computer</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+    <div class="container">
+        <a class="stone-button" id="stone" onclick="play('stone')">Stone</a>
+        <a class="paper-button" id="paper" onclick="play('paper')">Paper</a>
+        <a class="scissors-button" id="scissors" onclick="play('scissors')">Scissors</a>
+    </div>
+</body>
+</html>
