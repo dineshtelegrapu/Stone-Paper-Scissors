@@ -18,12 +18,10 @@ body{
     width: 320px;
     margin: 30px auto;
     padding: 15px 25px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-
     background: #753636;
     color: white;
     border-radius: 12px;
@@ -54,8 +52,8 @@ body{
 
 .container{
     width: 90%;
-    max-width: 900px;
-    margin: auto;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -75,9 +73,11 @@ body{
 
 /* Choice Image */
 
-.choice img{
+.choice-image{
     width: 120px;
     height: 120px;
+    justify-content: center;
+    align-items: center;
     object-fit: contain;
     transition: 0.3s;
 }
