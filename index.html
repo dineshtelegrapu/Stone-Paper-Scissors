@@ -9,7 +9,6 @@
 </head>
 <body>
     <h1 class="title">Stone - Paper - Scissors</h1>
-
     <div class="score-board">
         <div id="user-label" class="badge">You</div>
         <span id="user-score">0</span>
@@ -17,27 +16,31 @@
         <span id="computer-score">0</span>
         <div id="computer-label" class="badge">Computer</div>
     </div>
-
     <div class="result">
         <p id="result-text">Choose your move!</p>
     </div>
+
     <img class="choice-image" src="choice-image.jpeg" alt="Choice Image" id="choice-image">
+
     <div class="container">
         <div class="choice">
             <button id="stone" onclick="play('stone')">
                 Stone
             </button>
         </div>
-
         <div class="choice">
             <button id="paper" onclick="play('paper')">
                 Paper
             </button>
         </div>
-
         <div class="choice">
             <button id="scissors" onclick="play('scissors')">
                 Scissors
+            </button>
+        </div>
+        <div class="restart-game">
+            <button id="reset" onclick="resetGame()">
+                Reset Game
             </button>
         </div>
     </div>
