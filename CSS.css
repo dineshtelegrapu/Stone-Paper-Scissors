@@ -86,41 +86,40 @@ body{
     transform: scale(1.08);
 }
 
-/* Stone-Paper-Scissors Buttons */
+/* Choice Button Style */
 
-.choice button{
+.choice button,
+.restart-game button {
     background: #5d1a1a;
     color: white;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.choice button {
     padding: 12px 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
 }
 
-.restart-game{
-    margin-top: 30px;
+.restart-game {
+    margin-top: 2%;
+    margin-right: 6%;
 }
 
-.restart-game button{
-    background: #5d1a1a;
-    color: white;
-    border: none;
-    border-radius: 8px;
+.restart-game button {
     padding: 20px 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
 }
 
-.choice button:hover{
+.choice button:hover,
+.restart-game button:hover {
     background: #8c2a2a;
     transform: translateY(-3px);
 }
 
-.choice button:active{
+.choice button:active,
+.restart-game button:active {
     transform: scale(0.96);
 }
