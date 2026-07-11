@@ -7,19 +7,21 @@ const computerScoreSpan = document.getElementById("computer-score");
 const resultText = document.getElementById("result-text");
 const restartButton = document.getElementById("restart-game");
 const choices = ["stone", "paper", "scissors"];
+
 // Restart Game Button
-restartButton.addEventListener("click", () => {
+restartButton.addEventListener("click", restartGame);
+
+function restartGame() {
     userScore = 0;
     computerScore = 0;
     userScoreSpan.textContent = userScore;
     computerScoreSpan.textContent = computerScore;
-    resultText.textContent = "Game restarted. Make your choice!";
-});
+    resultText.textContent = "Game restarted! Make your choice.";
+}
 
 // Generate computer choice
 function getComputerChoice() {
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    return choices[randomIndex];
+    return choices[Math.floor(Math.random() * choices.length)];
 }
 
 // Capitalizing first letter of a word
@@ -29,9 +31,9 @@ function capitalize(word) {
 
 // function for one round
 function play(userChoice) {
-    // Stop the game if it is already over
-    if (userScore >= WIN_LIMIT || computerScore >= WIN_LIMIT) {
-        resultText.textContent = "Game Over! Refresh the page to play again.";
+    // Stop if game is already over
+    if (userScore === WIN_LIMIT || computerScore === WIN_LIMIT) {
+        resultText.textContent = "Game Over! Click Restart to play again.";
         return;
     }
     const computerChoice = getComputerChoice();
@@ -55,8 +57,8 @@ function play(userChoice) {
                 `You Win! ${capitalize(userChoice)} beats ${capitalize(computerChoice)}.`;
         }
     }
-    // When computer wins
     else {
+        // When computer wins
         computerScore++;
         computerScoreSpan.textContent = computerScore;
         if (computerScore === WIN_LIMIT) {
@@ -68,13 +70,8 @@ function play(userChoice) {
         }
     }
 }
+
 // Button Events so that when user clicks on a button, the play function is called with the choice.
-document.getElementById("stone").addEventListener("click", () => {
-    play("stone");
-});
-document.getElementById("paper").addEventListener("click", () => {
-    play("paper");
-});
-document.getElementById("scissors").addEventListener("click", () => {
-    play("scissors");
-});
+document.getElementById("stone").addEventListener("click", () => play("stone"));
+document.getElementById("paper").addEventListener("click", () => play("paper"));
+document.getElementById("scissors").addEventListener("click", () => play("scissors"));
