@@ -6,18 +6,8 @@ const userScoreSpan = document.getElementById("user-score");
 const computerScoreSpan = document.getElementById("computer-score");
 const resultText = document.getElementById("result-text");
 const restartButton = document.getElementById("restart-game");
+
 const choices = ["stone", "paper", "scissors"];
-
-// Restart Game Button
-restartButton.addEventListener("click", restartGame);
-
-function restartGame() {
-    userScore = 0;
-    computerScore = 0;
-    userScoreSpan.textContent = userScore;
-    computerScoreSpan.textContent = computerScore;
-    resultText.textContent = "Game restarted! Make your choice.";
-}
 
 // Generate computer choice
 function getComputerChoice() {
@@ -69,6 +59,16 @@ function play(userChoice) {
                 `You Lose! ${capitalize(computerChoice)} beats ${capitalize(userChoice)}.`;
         }
     }
+}
+
+// Restart Game
+restartButton.addEventListener("click", restartGame);
+function restartGame() {
+    userScore = 0;
+    computerScore = 0;
+    userScoreSpan.textContent = "0";
+    computerScoreSpan.textContent = "0";
+    resultText.textContent = "Game restarted! Make your choice.";
 }
 
 // Button Events so that when user clicks on a button, the play function is called with the choice.
