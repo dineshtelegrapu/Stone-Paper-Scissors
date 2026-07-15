@@ -19,45 +19,58 @@ function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
+// Update scoreboard
+function updateScore() {
+    userScoreSpan.textContent = userScore;
+    computerScoreSpan.textContent = computerScore;
+}
+
+// End game
+function gameOver(message) {
+    resultText.textContent = message;
+
+    document.getElementById("stone").disabled = true;
+    document.getElementById("paper").disabled = true;
+    document.getElementById("scissors").disabled = true;
+}
+
 // Play one round
 function play(userChoice) {
-    // Stop game if someone has already won
-    if (userScore === WIN_LIMIT || computerScore === WIN_LIMIT) {
-        resultText.textContent = "Game Over! Click Restart to play again.";
+    if (userScore >= WIN_LIMIT || computerScore >= WIN_LIMIT) {
         return;
     }
-
     const computerChoice = getComputerChoice();
+
     // Draw
     if (userChoice === computerChoice) {
-        resultText.textContent = `It's a Draw! Both chose ${capitalize(userChoice)}.`;
+        resultText.textContent =
+            `🤝 Draw! Both chose ${capitalize(userChoice)}.`;
         return;
     }
-
-    // User wins
-    if (
+    const userWins =
         (userChoice === "stone" && computerChoice === "scissors") ||
         (userChoice === "paper" && computerChoice === "stone") ||
-        (userChoice === "scissors" && computerChoice === "paper")
-    ) {
+        (userChoice === "scissors" && computerChoice === "paper");
+    if (userWins) {
         userScore++;
-        userScoreSpan.textContent = userScore;
-
+        updateScore();
         if (userScore === WIN_LIMIT) {
-            resultText.textContent = "🎉 Congratulations! You reached 5 points and won the game!";
+            gameOver("Congratulations! You won the match!");
         } else {
-            resultText.textContent = `You Win! ${capitalize(userChoice)} beats ${capitalize(computerChoice)}.`;
+            resultText.textContent =
+                `You Win! ${capitalize(userChoice)} beats ${capitalize(computerChoice)}.`;
         }
-    }
 
-    // Computer wins
-    else {
+    } else {
+
         computerScore++;
-        computerScoreSpan.textContent = computerScore;
+        updateScore();
+
         if (computerScore === WIN_LIMIT) {
-            resultText.textContent = "💻 Computer reached 5 points. You lost the game!";
+            gameOver("Computer wins the match!");
         } else {
-            resultText.textContent = `You Lose! ${capitalize(computerChoice)} beats ${capitalize(userChoice)}.`;
+            resultText.textContent =
+                `You Lose! ${capitalize(computerChoice)} beats ${capitalize(userChoice)}.`;
         }
     }
 }
@@ -66,13 +79,18 @@ function play(userChoice) {
 function restartGame() {
     userScore = 0;
     computerScore = 0;
-    userScoreSpan.textContent = "0";
-    computerScoreSpan.textContent = "0";
-    resultText.textContent = "Game restarted! Make your choice.";
+
+    updateScore();
+    resultText.textContent = "Choose Stone, Paper or Scissors.";
+    document.getElementById("stone").disabled = false;
+    document.getElementById("paper").disabled = false;
+    document.getElementById("scissors").disabled = false;
 }
 
-// Event Listeners
-document.getElementById("stone").addEventListener("click", () => play("stone"));
-document.getElementById("paper").addEventListener("click", () => play("paper"));
-document.getElementById("scissors").addEventListener("click", () => play("scissors"));
+// Event Listeners or score buttons
+document.getElementById("stone").addEventListener("click", function () {play("stone");});
+document.getElementById("paper").addEventListener("click", function () {play("paper");});
+document.getElementById("scissors").addEventListener("click", function () {play("scissors");});
 restartButton.addEventListener("click", restartGame);
+// Initialize score
+updateScore();
