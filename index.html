@@ -19,9 +19,15 @@
     <div class="result">
         <p id="result-text">Choose your move!</p>
     </div>
-    <div class="choice-images">
-        <img class="computer-choice-image" src="choice-image.jpeg" alt="Choice Image" id="computer-choice-image">
-        <img class="user-choice-image" src="choice-image.jpeg" alt="Choice Image" id="user-choice-image">
+    <div class="user-choice-image-container">
+        <img class="computer-choice-image" src="stone.jpeg" alt="Choice Image" id="computer-choice-image">
+        <img class="user-choice-image" src="paper.jpeg" alt="Choice Image" id="user-choice-image">
+        <img class="user-choice-image" src="scissors.jpeg" alt="Choice Image" id="user-choice-image">
+    </div>
+    <div class="computer-choice-image-container">
+        <img class="computer-choice-image" src="stone.jpeg" alt="Choice Image" id="computer-choice-image">
+        <img class="user-choice-image" src="paper.jpeg" alt="Choice Image" id="user-choice-image">
+        <img class="user-choice-image" src="scissors.jpeg" alt="Choice Image" id="user-choice-image">
     </div>
     <div class="container">
         <div class="choice">
@@ -40,8 +46,8 @@
             </button>
         </div>
         <div class="restart-game">
-            <button id="reset" onclick="resetGame()">
-                Reset Game
+            <button id="restart-game" onclick="restartGame()">
+                Restart Game
             </button>
         </div>
     </div>
