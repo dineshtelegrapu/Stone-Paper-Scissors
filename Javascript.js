@@ -28,7 +28,6 @@ function updateScore() {
 // End game
 function gameOver(message) {
     resultText.textContent = message;
-
     document.getElementById("stone").disabled = true;
     document.getElementById("paper").disabled = true;
     document.getElementById("scissors").disabled = true;
