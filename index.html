@@ -8,49 +8,50 @@
     <title>Stone-Paper-Scissors</title>
 </head>
 <body>
-    <h1 class="title">Stone - Paper - Scissors</h1>
-    <div class="score-board">
-        <div id="user-label" class="badge">You</div>
-        <span id="user-score">0</span>
-        <span class="colon">:</span>
-        <span id="computer-score">0</span>
-        <div id="computer-label" class="badge">Computer</div>
-    </div>
-    <div class="result">
-        <p id="result-text">Choose your move!</p>
-    </div>
-    <div class="user-choice-image-container">
-        <img class="computer-choice-image" src="stone.jpeg" alt="Choice Image" id="computer-choice-image">
-        <img class="user-choice-image" src="paper.jpeg" alt="Choice Image" id="user-choice-image">
-        <img class="user-choice-image" src="scissors.jpeg" alt="Choice Image" id="user-choice-image">
-    </div>
-    <div class="computer-choice-image-container">
-        <img class="computer-choice-image" src="stone.jpeg" alt="Choice Image" id="computer-choice-image">
-        <img class="user-choice-image" src="paper.jpeg" alt="Choice Image" id="user-choice-image">
-        <img class="user-choice-image" src="scissors.jpeg" alt="Choice Image" id="user-choice-image">
-    </div>
-    <div class="container">
-        <div class="choice">
-            <button id="stone" onclick="play('stone')">
-                Stone
-            </button>
+    <section class="game-container">
+        <h1 class="title">Stone - Paper - Scissors</h1>
+        <div class="score-board">
+            <div id="user-label" class="badge">You</div>
+            <span id="user-score">0</span>
+            <span class="colon">:</span>
+            <span id="computer-score">0</span>
+            <div id="computer-label" class="badge">Computer</div>
         </div>
-        <div class="choice">
-            <button id="paper" onclick="play('paper')">
-                Paper
-            </button>
+        <div class="result">
+            <p id="result-text">Choose your move!</p>
         </div>
-        <div class="choice">
-            <button id="scissors" onclick="play('scissors')">
-                Scissors
-            </button>
+        <div class="user-choice-image-container">
+            <img class="user-choice-image" src="stone.jpeg" alt="Choice Image" id="user-choice-image">
+            <img class="user-choice-image" src="paper.jpeg" alt="Choice Image" id="user-choice-image">
+            <img class="user-choice-image" src="scissors.jpeg" alt="Choice Image" id="user-choice-image">
         </div>
+        <div class="computer-choice-image-container">
+            <img class="computer-choice-image" src="stone.jpeg" alt="Choice Image" id="computer-choice-image">
+            <img class="computer-choice-image" src="paper.jpeg" alt="Choice Image" id="computer-choice-image">
+            <img class="computer-choice-image" src="scissors.jpeg" alt="Choice Image" id="computer-choice-image">
+        </div>
+        <div class="container">
+            <div class="choice">
+                <button id="stone" onclick="play('stone')">
+                    Stone
+                </button>
+            </div>
+            <div class="choice">
+                <button id="paper" onclick="play('paper')">
+                    Paper
+                </button>
+            </div>
+            <div class="choice">
+                <button id="scissors" onclick="play('scissors')">
+                    Scissors
+                </button>
+            </div>
+            </div>
         <div class="restart-game">
             <button id="restart-game" onclick="restartGame()">
                 Restart Game
             </button>
         </div>
-    </div>
-
+    </section>
 </body>
 </html>
