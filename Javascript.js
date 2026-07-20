@@ -11,7 +11,7 @@ const choices = ["stone", "paper", "scissors"];
 
 // Generate computer choice
 function getComputerChoice() {
-    return choices[Math.floor(Math.random() * choices.length)];
+    return choices[Math.floor(Math.random() * 3)];
 }
 
 // Capitalize first letter
@@ -46,12 +46,13 @@ function play(userChoice) {
             `🤝 Draw! Both chose ${capitalize(userChoice)}.`;
         return;
     }
+    
     const userWins =
         (userChoice === "stone" && computerChoice === "scissors") ||
         (userChoice === "paper" && computerChoice === "stone") ||
         (userChoice === "scissors" && computerChoice === "paper");
     if (userWins) {
-        userScore++;
+        userScore += 1;
         updateScore();
         if (userScore === WIN_LIMIT) {
             gameOver("Congratulations! You won the match!");
@@ -62,7 +63,7 @@ function play(userChoice) {
 
     } else {
 
-        computerScore++;
+        computerScore += 1;
         updateScore();
 
         if (computerScore === WIN_LIMIT) {
@@ -91,5 +92,6 @@ document.getElementById("stone").addEventListener("click", function () {play("st
 document.getElementById("paper").addEventListener("click", function () {play("paper");});
 document.getElementById("scissors").addEventListener("click", function () {play("scissors");});
 restartButton.addEventListener("click", restartGame);
+
 // Initialize score
 updateScore();
