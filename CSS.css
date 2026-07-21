@@ -1,123 +1,208 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #e3b5b5;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Stone-Paper-Scissors Title */
+body{
+    background:rgb(9, 9, 67);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.game-container{
+    width:100%;
+    max-width:900px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
 
 .title{
-    text-align: center;
-    margin-top: 30px;
-    color: #5d1a1a;
-    font-size: 40px;
+    font-size:2.5rem;
+    color:#1f2937;
+    margin-bottom:25px;
 }
 
-/* you-computer Score Board */
-
 .score-board{
-    width: 320px;
-    margin: 30px auto;
-    padding: 15px 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    background: #753636;
-    color: white;
-    border-radius: 12px;
-    font-size: 28px;
-    position: relative;
+    width:260px;
+    margin:0 auto 25px;
+    border:3px solid #2563eb;
+    border-radius:15px;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    position:relative;
 }
 
 .badge{
-    background: #ff5a5a;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: bold;
+    position:absolute;
+    background:#2563eb;
+    color:#fff;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
 }
 
-/* Result */
+#user-label{
+    left:-25px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+#computer-label{
+    right:-45px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+#user-score,
+#computer-score{
+    font-size:2.2rem;
+    font-weight:700;
+    color:#111827;
+}
+
+.colon{
+    font-size:2rem;
+    font-weight:bold;
+}
 
 .result{
-    text-align: center;
-    margin-bottom: 40px;
+    margin:25px 0;
 }
 
-.result p{
-    font-size: 24px;
-    color: #5d1a1a;
-    font-weight: bold;
+#result-text{
+    font-size:1.3rem;
+    font-weight:600;
+    color:#374151;
+}
+
+.user-choice-image-container,
+.computer-choice-image-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.user-choice-image,
+.computer-choice-image{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:2px solid #2563eb;
+    object-fit:cover;
 }
 
 .container{
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
 }
 
-.choice{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.choice button{
+    width:140px;
+    padding:14px;
+    font-size:18px;
+    font-weight:600;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* Choice Image */
-
-.choice-images{
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 20px;
+.choice button:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
 }
 
-.choice img:hover{
-    transform: scale(1.08);
+.choice button:active{
+    transform:scale(.95);
 }
 
-/* Choice Button Style */
-
-.choice button,
-.restart-game button {
-    background: #753636;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.choice button:disabled{
+    background:#9ca3af;
+    cursor:not-allowed;
+    transform:none;
 }
 
-.choice button {
-    padding: 12px 25px;
+.restart-game{
+    margin-top:35px;
 }
 
-.restart-game {
-    margin-top: 2%;
-    margin-right: 6%;
+#restart-game{
+    padding:14px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#16a34a;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.restart-game button {
-    padding: 20px 25px;
+#restart-game:hover{
+    background:#15803d;
+    transform:translateY(-3px);
 }
 
-.choice button:hover,
-.restart-game button:hover {
-    background: #8c2a2a;
-    transform: translateY(-3px);
+#restart-game:active{
+    transform:scale(.95);
 }
 
-.choice button:active,
-.restart-game button:active {
-    transform: scale(0.96);
+/* Mobile scaling */
+
+@media(max-width:600px){
+
+    .title{
+        font-size:2rem;
+    }
+
+    .score-board{
+        width:220px;
+    }
+
+    #user-score,
+    #computer-score{
+        font-size:1.8rem;
+    }
+
+    .user-choice-image,
+    .computer-choice-image{
+        width:85px;
+        height:85px;
+    }
+
+    .choice button{
+        width:120px;
+        font-size:16px;
+    }
+
+    .badge{
+        font-size:12px;
+        padding:4px 8px;
+    }
+
+    #user-label{
+        left:-18px;
+    }
+
+    #computer-label{
+        right:-35px;
+    }
 }
