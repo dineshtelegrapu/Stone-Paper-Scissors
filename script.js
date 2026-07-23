@@ -33,7 +33,7 @@ function gameOver(message) {
     document.getElementById("scissors").disabled = true;
 }
 
-// Play one round
+// One Round function
 function play(userChoice) {
     if (userScore >= WIN_LIMIT || computerScore >= WIN_LIMIT) {
         return;
