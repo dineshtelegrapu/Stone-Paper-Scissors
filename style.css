@@ -126,11 +126,6 @@ body{
     transition:.3s;
 }
 
-.choice button:hover{
-    background:#1d4ed8;
-    transform:translateY(-4px);
-}
-
 .choice button:active{
     transform:scale(.95);
 }
