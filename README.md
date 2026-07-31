@@ -87,7 +87,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Dinesh**
+**T Dinesh**
 
 GitHub: [https://github.com/your-username](https://github.com/dineshtelegrapu)
 
