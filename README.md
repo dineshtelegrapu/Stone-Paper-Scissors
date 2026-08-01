@@ -89,7 +89,7 @@ This project is licensed under the MIT License.
 
 **T Dinesh**
 
-GitHub: [https://github.com/your-username](https://github.com/dineshtelegrapu)
+GitHub: https://github.com/dineshtelegrapu
 
 ---
 
