@@ -43,7 +43,7 @@ function play(userChoice) {
     // Draw
     if (userChoice === computerChoice) {
         resultText.textContent =
-            `🤝 Draw! Both chose ${capitalize(userChoice)}.`;
+            `Draw! Both chose ${capitalize(userChoice)}.`;
         return;
     }
     
