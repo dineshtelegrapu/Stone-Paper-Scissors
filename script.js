@@ -25,7 +25,7 @@ function updateScore() {
     computerScoreSpan.textContent = computerScore;
 }
 
-// End game
+// Game ends
 function gameOver(message) {
     resultText.textContent = message;
     document.getElementById("stone").disabled = true;
@@ -40,7 +40,7 @@ function play(userChoice) {
     }
     const computerChoice = getComputerChoice();
 
-    // Draw
+    // Draw on both sides
     if (userChoice === computerChoice) {
         resultText.textContent =
             `Draw! Both chose ${capitalize(userChoice)}.`;
