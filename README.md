@@ -7,7 +7,6 @@ A simple and interactive **Stone Paper Scissors** game built using **HTML, CSS, 
 ## 🚀 Features
 
 * 🎲 Random computer choice
-* 🧑 Player vs Computer gameplay
 * 📊 Live score tracking
 * 🏆 First to 5 points wins
 * 🔄 Restart game functionality
@@ -93,4 +92,5 @@ GitHub: https://github.com/dineshtelegrapu
 
 ---
 
-⭐ If you enjoyed this project, consider giving it a star on GitHub!
+If you enjoyed this project, consider giving it a star on GitHub!
+Thank you.
