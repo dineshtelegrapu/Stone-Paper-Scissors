@@ -71,18 +71,22 @@ body{
     font-weight:700;
     color:#111827;
 }
+
 .colon{
     font-size:2rem;
     font-weight:bold;
 }
+
 .result{
     margin:25px 0;
 }
+
 #result-text{
     font-size:1.3rem;
     font-weight:600;
     color:#374151;
 }
+
 .user-choice-image-container,
 .computer-choice-image-container{
     display:flex;
@@ -145,6 +149,11 @@ body{
     color:white;
     cursor:pointer;
     transition:.3s;
+}
+
+#restart-game:hover{
+    background:#15803d;
+    transform:translateY(-3px);
 }
 
 #restart-game:active{
