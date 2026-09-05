@@ -151,11 +151,6 @@ body{
     transition:.3s;
 }
 
-#restart-game:hover{
-    background:#15803d;
-    transform:translateY(-3px);
-}
-
 #restart-game:active{
     transform:scale(.95);
 }
