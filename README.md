@@ -24,11 +24,11 @@ Technologies Used
 Project Structure
 
 Stone-Paper-Scissors/
-│
-├── index.html
-├── style.css
-├── index.js
-└── README.md
+
+1. index.html
+2. style.css
+3. index.js
+4. README.md
 
 How to Play
 
