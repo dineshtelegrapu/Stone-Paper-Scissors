@@ -1,98 +1,89 @@
-Stone Paper Scissors Game
+# 🎮 Stone Paper Scissors Game
 
-Overview
+Stone Paper Scissors is a simple browser-based game where the player competes against the computer. The first player to reach **5 points** wins the game.
 
-Stone Paper Scissors is a simple and interactive browser-based game developed using HTML5, CSS3, and JavaScript (ES6). The game allows a user to compete against the computer, with the first player to score 5 points declared the winner.
+I built this project to practice JavaScript fundamentals such as DOM manipulation, event handling, random number generation, conditions, and updating the UI dynamically.
 
-The project demonstrates fundamental concepts of web development, including DOM manipulation, event handling, random number generation, conditional statements, and dynamic user interface updates.
+## 🚀 Features
 
-Features
+* Play against the computer
+* Random computer choices
+* Real-time score tracking
+* First-to-5 scoring system
+* Dynamic result messages
+* Restart game button
+* Responsive interface
 
-- Random computer selection
-- Real-time score tracking
-- First-to-5 scoring system
-- Dynamic game result messages
-- Restart game functionality
-- Responsive and user-friendly interface
+## 🛠️ Technologies Used
 
-Technologies Used
+* **HTML5** – Structure of the game
+* **CSS3** – Styling and responsive design
+* **JavaScript (ES6)** – Game logic and user interactions
 
-- HTML5 – Used to structure the application.
-- CSS3 – Used for styling and responsive design.
-- JavaScript (ES6) – Used to implement the game logic and user interactions.
+## 📁 Project Structure
 
-Project Structure
-
+```text
 Stone-Paper-Scissors/
+├── index.html
+├── style.css
+├── index.js
+└── README.md
+```
 
-1. index.html
-2. style.css
-3. index.js
-4. README.md
+## 🎯 How to Play
 
-How to Play
+1. Choose **Stone, Paper, or Scissors**.
+2. The computer randomly chooses an option.
+3. The two choices are compared.
+4. The winner gets one point.
+5. The first player to reach **5 points** wins.
+6. Click **Restart Game** to start again.
 
-1. Select Stone, Paper, or Scissors.
-2. The computer randomly selects one of the three choices.
-3. The choices are compared according to the standard game rules.
-4. The winner of each round receives one point.
-5. The first player to reach 5 points wins the game.
-6. Select Restart Game to reset the scores and begin a new game.
+## 📜 Game Rules
 
-Game Rules
+* 🪨 Stone beats Scissors
+* ✂️ Scissors beats Paper
+* 📄 Paper beats Stone
+* Same choices result in a draw.
 
-- Stone beats Scissors
-- Scissors beats Paper
-- Paper beats Stone
-- If both players select the same option, the round is declared a draw.
+## ▶️ How to Run
 
-Future Enhancements
-
-The following features may be added in future versions:
-
-- Round animations and visual effects
-- Sound effects
-- Dark and light themes
-- Multiple difficulty levels
-- Multiplayer functionality
-- Game history
-- Win-percentage statistics
-- Best-score tracking using browser Local Storage
-
-Installation and Usage
-
-No additional software or dependencies are required to run this project.
-
-Steps
+No additional software or dependencies are required.
 
 1. Clone or download the repository.
-2. Open the project directory.
-3. Open "index.html" in a modern web browser.
-4. Start playing the game.
+2. Open the project folder.
+3. Open `index.html` in a web browser.
+4. Start playing.
 
-Contributing
+## 🔮 Future Improvements
 
-Contributions and suggestions are welcome.
+* Game animations and effects
+* Sound effects
+* Dark/light mode
+* Difficulty levels
+* Multiplayer mode
+* Game history
+* Win percentage statistics
+* Best-score tracking with Local Storage
 
-To contribute:
+## 📚 What I Learned
 
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Implement and test your changes.
-4. Commit your changes.
-5. Push the branch to your repository.
-6. Submit a Pull Request.
+This project helped me practice JavaScript and understand how user actions can interact with the webpage through the DOM.
 
-License
+I worked with:
 
-This project is licensed under the MIT License.
+* DOM manipulation
+* Event listeners
+* JavaScript functions
+* Conditional statements
+* Arrays
+* Random number generation
+* Dynamic UI updates
 
-Author
+## 👨‍💻 Author
 
-T Dinesh
+**T Dinesh**
 
 GitHub: https://github.com/dineshtelegrapu
 
----
-
-If you find this project's fundamentals, please consider giving the repository a star.
+If you find the project useful, feel free to ⭐ the repository.
