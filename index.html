@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Makes the page responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS and JavaScript files -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Stone-Paper-Scissors</title>
 </head>
+
 <body>
+    <!-- Main game container -->
     <section class="game-container">
+
         <h1 class="title">Stone - Paper - Scissors</h1>
+
+        <!-- Displays the scores of the user and computer -->
         <div class="score-board">
             <div id="user-label" class="badge">You</div>
             <span id="user-score">0</span>
@@ -17,36 +24,45 @@
             <span id="computer-score">0</span>
             <div id="computer-label" class="badge">Computer</div>
         </div>
+
+        <!-- Displays the game result -->
         <div class="result">
             <p id="result-text">Choose your move!</p>
         </div>
+        <!-- Images for the user's selected choice -->
         <div class="user-choice-image-container">
             <img class="user-choice-image-stone" src="stone.jpeg" alt="Stone" id="user-choice-image-stone">
             <img class="user-choice-image-paper" src="paper.jpeg" alt="Paper" id="user-choice-image-paper">
             <img class="user-choice-image-scissors" src="scissors.jpeg" alt="Scissors" id="user-choice-image-scissors">
         </div>
+
+        <!-- Images for the computer's selected choice -->
         <div class="computer-choice-image-container">
             <img class="computer-choice-image-stone" src="stone.jpeg" alt="Choice Image" id="computer-choice-image-stone">
             <img class="computer-choice-image-paper" src="paper.jpeg" alt="Choice Image" id="computer-choice-image-paper">
             <img class="computer-choice-image-scissors" src="scissors.jpeg" alt="Choice Image" id="computer-choice-image-scissors">
         </div>
+        <!-- Buttons used by the user to select a move -->
         <div class="container">
             <div class="choice">
                 <button id="stone">
                     Stone
                 </button>
             </div>
+
             <div class="choice">
                 <button id="paper">
                     Paper
                 </button>
             </div>
+
             <div class="choice">
                 <button id="scissors">
                     Scissors
                 </button>
             </div>
-            </div>
+        </div>
+        <!-- Button to reset the game -->
         <div class="restart-game">
             <button id="restart-game">
                 Restart Game
